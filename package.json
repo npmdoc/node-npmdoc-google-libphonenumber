@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"google-libphonenumber",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "google-libphonenumber",
+    "description": "api documentation for [google-libphonenumber (v2.0.14)](http://seegno.github.io/google-libphonenumber/) [![npm package](https://img.shields.io/npm/v/npmdoc-google-libphonenumber.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-google-libphonenumber) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-google-libphonenumber.svg)](https://travis-ci.org/npmdoc/node-npmdoc-google-libphonenumber)",
     "devDependencies": {
-        "google-libphonenumber": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "google-libphonenumber": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-google-libphonenumber",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-google-libphonenumber",
+    "keywords": [
+        "documentation",
+        "google-libphonenumber"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_google_libphonenumber.js",
+    "name": "npmdoc-google-libphonenumber",
+    "nameAlias": "npmdoc_google_libphonenumber",
+    "nameOriginal": "npmdoc-google-libphonenumber",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-google-libphonenumber"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
