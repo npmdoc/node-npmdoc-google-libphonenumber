@@ -1,6 +1,6 @@
 # npmdoc-google-libphonenumber
 
-#### api documentation for  [google-libphonenumber (v2.0.14)](http://seegno.github.io/google-libphonenumber/)  [![npm package](https://img.shields.io/npm/v/npmdoc-google-libphonenumber.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-google-libphonenumber) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-google-libphonenumber.svg)](https://travis-ci.org/npmdoc/node-npmdoc-google-libphonenumber)
+#### api documentation for  [google-libphonenumber (v2.0.15)](http://seegno.github.io/google-libphonenumber/)  [![npm package](https://img.shields.io/npm/v/npmdoc-google-libphonenumber.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-google-libphonenumber) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-google-libphonenumber.svg)](https://travis-ci.org/npmdoc/node-npmdoc-google-libphonenumber)
 
 #### The up-to-date and reliable Google's libphonenumber package for node.js.
 
@@ -39,13 +39,13 @@
     },
     "directories": {},
     "dist": {
-        "shasum": "c7496aceb9fc4c7d47c6148985da881814fddd2e",
-        "tarball": "https://registry.npmjs.org/google-libphonenumber/-/google-libphonenumber-2.0.14.tgz"
+        "shasum": "d890959d2f7e374ff901296bc76d07f1e24adabe",
+        "tarball": "https://registry.npmjs.org/google-libphonenumber/-/google-libphonenumber-2.0.15.tgz"
     },
     "engines": {
         "node": ">=0.10"
     },
-    "gitHead": "0bc7603296b599dd4c00738bba942a0a5bf22c1c",
+    "gitHead": "7e88e7f5bcb031488e2438c48c722f1f70bec5d3",
     "homepage": "http://seegno.github.io/google-libphonenumber/",
     "keywords": [
         "browserify",
@@ -87,7 +87,7 @@
         "update": "bin/update.sh",
         "version": "npm run changelog --future-release=$npm_package_version && npm run build && git add -A CHANGELOG.md dist"
     },
-    "version": "2.0.14"
+    "version": "2.0.15"
 }
 ```
 
