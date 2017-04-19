@@ -51,7 +51,7 @@
 
         href="http://seegno.github.io/google-libphonenumber/"
 
-    >google-libphonenumber (v2.0.14)</a>
+    >google-libphonenumber (v2.0.15)</a>
 </h1>
 <h4>The up-to-date and reliable Google's libphonenumber package for node.js.</h4>
 <div class="apidocSectionDiv"><a
@@ -12741,7 +12741,9 @@ PhoneNumberType.MOBILE;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isPossibleNumber = function (a) {
-  return this.isPossibleNumberWithReason(a) == i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE;
+  a = this.isPossibleNumberWithReason(a);
+  return a == i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE || a == i18n.phonenumbers.PhoneNumberUtil.ValidationResult
+.IS_POSSIBLE_LOCAL_ONLY;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -12756,7 +12758,9 @@ PhoneNumberType.MOBILE;
     </h2>
     <ul>
     <li>description and source-code<pre class="apidocCodePre">isPossibleNumberForType = function (a, b) {
-  return this.isPossibleNumberForTypeWithReason(a, b) == i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE;
+  var c = this.isPossibleNumberForTypeWithReason(a, b);
+  return c == i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE || c == i18n.phonenumbers.PhoneNumberUtil.ValidationResult
+.IS_POSSIBLE_LOCAL_ONLY;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
@@ -13234,12 +13238,12 @@ a, f, c, d), 0 == g) {
   }
   a = a.length;
   if (-1 &#x3c; goog.array.indexOf(d, a)) {
-    return i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE;
+    return i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE_LOCAL_ONLY;
   }
   b = e[0];
   return b == a ? i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE : b &#x3e; a ? i18n.phonenumbers.PhoneNumberUtil.ValidationResult
 .TOO_SHORT : e[e.length - 1] &#x3c; a ? i18n.phonenumbers.PhoneNumberUtil.ValidationResult.TOO_LONG : -1 &#x3c; goog.array.indexOf(e, a, 1
-) ? i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE : i18n.phonenumbers.PhoneNumberUtil.ValidationResult.TOO_LONG
+) ? i18n.phonenumbers.PhoneNumberUtil.ValidationResult.IS_POSSIBLE : i18n.phonenumbers.PhoneNumberUtil.ValidationResult.INVALID_LENGTH
 ;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
